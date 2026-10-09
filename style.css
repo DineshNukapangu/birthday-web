@@ -1,0 +1,272 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    color: #fff0f5;
+    text-align: center;
+    overflow-x: hidden;
+}
+/* ================= SCREENS ================= */
+.screen {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease;
+}
+.content {
+    width: 100%;
+    max-width: 1000px;
+}
+/* ================= step 1 ================= */
+.hero {
+
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background:linear-gradient(135deg,
+    #E0C3FC,
+    #8EC5FC,
+    pink);
+}
+.hero-content{
+color: #000;    
+max-width: 100%;
+max-width: 500px;
+}
+.small-title {
+font-size: 14px;
+color: black;
+letter-spacing: 3px;
+margin-bottom: 20px;
+}
+h1 {
+font-size: clamp(40px, 8vw, 80px);
+font-weight: 800;
+margin-bottom: 20px;
+}
+h2 {
+font-size: clamp(25px, 4vw, 40px);
+margin: 15px 0;
+}
+.intro {
+font-size: 18px;
+line-height: 1.7;
+margin: 25px auto;
+max-width: 650px;
+}
+/* ================= BUTTON ================= */
+button {
+border: none;
+padding: 16px 30px;
+border-radius: 50px;
+background: white;
+color: #ff4f81;
+font-size: 17px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.3s;
+margin-top: 20px;
+}
+button:hover {
+transform: scale(1.08);
+box-shadow:
+0 10px 30px rgba(0, 0, 0, 0.2);
+}
+/* ================= STEP 2 ================= */
+#step2 {
+font-style: italic;
+color: black;
+background:linear-gradient(#84fab0,#8fd3f4);
+background-size: cover;
+background-position:center;
+background-repeat: no-repeat;
+min-height: 100vh;
+margin: 0;
+}
+.content{
+font-size: larger;
+}
+.intro{
+font-size: larger;
+}
+/* ================= step 3================= */
+#step3{
+    color: #000;
+}
+.birthday-screen {
+background:url(./birthday1.jpg);
+background-size: contain;
+}
+.cake {
+font-size: 140px;
+margin: 20px;
+animation: bounce 1.5s infinite;
+}
+/* ================= photos ================= */
+.memories-screen {
+background: url(./bd3.jpg);
+background-size: cover;
+}
+.section-text {
+font-size: 18px;
+margin: 15px 0 40px;
+}
+.photo-grid {
+max-width: 1000px;
+margin: auto;
+display: grid;
+grid-template-columns:
+repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
+}
+.photo-card {
+background: white;
+color: #444;
+padding: 12px;
+border-radius: 20px;
+box-shadow:
+0 15px 30px rgba(0, 0, 0, 0.15);
+transition: 0.4s;
+}
+.photo-card:hover {
+transform:
+translateY(-10px)
+rotate(1deg);
+}
+.photo-card img {
+width: 100%;
+height: 300px;
+object-fit: cover;
+border-radius: 15px;
+}
+.photo-card p {
+padding: 15px;
+}
+/* ================= step 5================= */
+.message-screen {
+font-style: italic;
+color: #000;
+background:url(./bd2.jpg);
+background-size: cover;
+}
+.message-box {
+max-width: 700px;
+background:
+rgba(255, 255, 255, 0.2);
+padding: 40px;
+border-radius: 30px;
+backdrop-filter: blur(10px);
+line-height: 1.8;
+box-shadow:
+0 20px 40px
+rgba(0, 0, 0, 0.15);
+}
+.message-box p {
+margin: 15px 0;
+}
+.big-wish {
+font-size: 30px;
+font-weight: bold;
+}
+.signature {
+font-size: 20px;
+font-weight: bold;
+}
+/* ================= step 6 ================= */
+#step6{
+    color:black;
+}
+.final-screen {
+background:url(bd5.jpg);
+background-size: cover;
+}
+.final-text {
+font-size: 22px;
+max-width: 700px;
+line-height: 1.8;
+margin: 30px auto;
+}
+/* ================= BALLOONS ================= */
+.balloon {
+position: fixed;
+font-size: 50px;
+z-index: 10;
+pointer-events: none;
+animation:
+float 6s infinite ease-in-out;
+}
+.balloon1 {
+left: 5%;
+top: 20%;
+}
+.balloon2 {
+right: 8%;
+top: 30%;
+animation-delay: 1s;
+}
+.balloon3 {
+left: 15%;
+bottom: 15%;
+animation-delay: 2s;
+}
+.balloon4 {
+right: 20%;
+bottom: 20%;
+animation-delay: 3s;
+}
+/* ================= ANIMATIONS ================= */
+@keyframes float {
+0%,
+100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-40px);
+}
+}
+@keyframes bounce {
+0%,
+100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-25px);
+}
+}
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: scale(0.96);
+}
+to {
+opacity: 1;
+transform: scale(1);
+}
+}
+/* ================= MOBILE ================= */
+@media (max-width: 700px) {
+.screen {
+padding: 30px 15px;
+}
+.message-box {
+padding: 25px;
+}
+.photo-card img {
+height: 250px;
+}
+.cake {
+font-size: 100px;
+}
+.balloon {
+font-size: 35px;
+}
+}
